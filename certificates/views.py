@@ -53,6 +53,7 @@ class CertificateTypeListView(APIView):
                 'price': c.price,
                 'description': c.description,
                 'is_active':   c.is_active,  # ✅
+                'tiene_pdf_automatico': c.tiene_pdf_automatico,  # ✅
                 'department': {
                     'id': c.department.id,
                     'name': c.department.name,
@@ -88,6 +89,7 @@ class CertificateTypeDetailView(APIView):
             'price': cert.price,
             'description': cert.description,
             'is_active': cert.is_active,
+            'tiene_pdf_automatico': cert.tiene_pdf_automatico,  # ✅
             'department': {
                 'id': cert.department.id,
                 'name': cert.department.name,
@@ -149,6 +151,7 @@ class CertificateTypeUpdateView(APIView):
         cert.price = data.get('price', cert.price)
         cert.description = data.get('description', cert.description)
         cert.is_active = data.get('is_active', cert.is_active)
+        cert.tiene_pdf_automatico = data.get('tiene_pdf_automatico', cert.tiene_pdf_automatico)
         cert.actividad_economica = data.get('actividad_economica', cert.actividad_economica)
         cert.codigo_sin = data.get('codigo_sin', cert.codigo_sin)
         cert.unidad_medida = data.get('unidad_medida', cert.unidad_medida)
@@ -158,4 +161,5 @@ class CertificateTypeUpdateView(APIView):
             'name': cert.name,
             'price': cert.price,
             'is_active': cert.is_active,
+            'tiene_pdf_automatico': cert.tiene_pdf_automatico,
         })
