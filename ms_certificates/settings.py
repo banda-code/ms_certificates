@@ -119,3 +119,5 @@ CORS_ALLOWED_ORIGINS = os.environ.get(
     'CORS_ALLOWED_ORIGINS',
     'http://localhost:5173'
 ).split(',')
+
+STATIC_ROOT = os.environ.get('STATIC_ROOT', '/app/staticfiles')
