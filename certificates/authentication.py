@@ -19,6 +19,7 @@ class TokenUser:
         self.first_name       = payload.get('first_name', '')
         self.last_name        = payload.get('last_name', '')
         self.ci               = payload.get('ci', '')
+        self.fecha_nacimiento = payload.get('fecha_nacimiento')  # 👈 AGREGAR
 
     def __str__(self):
         return self.email

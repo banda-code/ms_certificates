@@ -2,6 +2,7 @@
 from django.urls import path
 from .views import (
     DepartmentListView,
+    DepartmentListPublicView,
     DepartmentCreateView,
     CertificateTypeListView,
     CertificateTypeDetailView,
@@ -12,6 +13,7 @@ from .views import (
 urlpatterns = [
     # Públicas (ciudadano autenticado)
     path('departments/', DepartmentListView.as_view(), name='department-list'),
+    path('departments/publico/', DepartmentListPublicView.as_view(), name='department-list-public'),  # Agregar esta ruta para departamentos públicos
     path('departments/crear/', DepartmentCreateView.as_view(), name='department-create'),
 
     
