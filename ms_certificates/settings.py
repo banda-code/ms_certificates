@@ -104,9 +104,9 @@ SIMPLE_JWT = {
 
 # ── Zona horaria ─────────────────────────────────────────────────────
 LANGUAGE_CODE = 'es-bo'
-TIME_ZONE     = 'America/La_Paz'
+TIME_ZONE = "America/La_Paz"
 USE_I18N      = True
-USE_TZ        = True
+USE_TZ = True
 
 STATIC_URL         = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
